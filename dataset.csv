@@ -1,0 +1,14 @@
+path_gambar,nama,suku,ekspresi,sudut,pencahayaan
+"dataset/Amar/Sunda/Amar_Sunda_miring45,bingung,outdoor.jpg",Amar,Sunda,bingung,miring45,outdoor
+"dataset/Asshiva/Minangkabau/Assiva_Minangkabau_profil,netral,outdoor.jpg",Asshiva,Minangkabau,netral,profil,outdoor
+"dataset/Bayu/Makassar/Bayu_Makassar_frontal,terkejut,outdoor.jpg",Bayu,Makassar,terkejut,frontal,outdoor
+"dataset/Channyfah/Jawa/Channyfah_Jawa_miring45,senyum, indoor.jpg",Channyfah,Jawa,senyum,miring45, indoor
+"dataset/Delia/Jawa/Delia_Jawa_miring45,senyum, indoor.jpg",Delia,Jawa,senyum,miring45, indoor
+"dataset/Fadyah/Batak/Fadyah_Batak_Miring45,senyum,outdoor.jpg",Fadyah,Batak,senyum,Miring45,outdoor
+"dataset/Fransiskus/Ambon/Fransiskus_Ambon_frontal,tengil,indoorjpg.jpg",Fransiskus,Ambon,tengil,frontal,indoorjpg
+"dataset/Juhra/Melayu/Juhra_Melayu_frontal,terkejut,indoor.jpg",Juhra,Melayu,terkejut,frontal,indoor
+"dataset/Nabila/Sunda/Nabila_Sunda_frontal,senyum,outdoor.jpg",Nabila,Sunda,senyum,frontal,outdoor
+"dataset/Narisa/Lampung/Narisa_Lampung_miring45,senyum,indoor.jpg",Narisa,Lampung,senyum,miring45,indoor
+"dataset/Rizky/Jawa/Rizky_Jawa_Profil,ketawa,indoor.jpg",Rizky,Jawa,ketawa,Profil,indoor
+"dataset/Tia/Jawa/Tia_Jawa_frontal,sinis,outdoor.jpg",Tia,Jawa,sinis,frontal,outdoor
+"dataset/Visi/Melayu/Visi_Melayu_profil,senyum,outdoor.jpg",Visi,Melayu,senyum,profil,outdoor
