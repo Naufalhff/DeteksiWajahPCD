@@ -12,8 +12,8 @@ output_folder = "cropped_faces"
 os.makedirs(output_folder, exist_ok=True)
 
 # Ukuran maksimum gambar input agar hemat memori
-MAX_SIZE = 1000  # bisa ditingkatkan agar wajah tidak terlalu kecil saat deteksi
-
+MAX_SIZE = 1000 
+obso
 # Ukuran minimum hasil crop wajah (agar tidak blur saat pelatihan/deteksi lanjut)
 OUTPUT_FACE_SIZE = (512, 512)
 
