@@ -58,11 +58,11 @@ for root, dirs, files in os.walk(input_folder):
 
         # Augmentasi
         augmented = {
-            "rot15": rotate_image(img, 15),
-            "rot-15": rotate_image(img, -15),
+            "rotasi+15": rotate_image(img, 15),
+            "rotasi-15": rotate_image(img, -15),
             "flip": flip_horizontal(img),
-            "bright": adjust_brightness_contrast(img, brightness=30, contrast=0.2),
-            "dark": adjust_brightness_contrast(img, brightness=-30, contrast=-0.2),
+            "brightness_contrast": adjust_brightness_contrast(img, brightness=30, contrast=0.2),
+            "dark_contrast": adjust_brightness_contrast(img, brightness=-30, contrast=-0.2),
             "noise": add_gaussian_noise(img),
             "sharp": sharpen_image(img)
         }

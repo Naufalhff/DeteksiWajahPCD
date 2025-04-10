@@ -15,10 +15,11 @@ for nama in os.listdir(dataset_dir):
             path_suku = os.path.join(path_nama, suku)
             if os.path.isdir(path_suku):
                 for file in os.listdir(path_suku):
-                    if file.lower().endswith(('.jpg', '.jpeg', '.png')):
+                    # Tambahkan dukungan .webp
+                    if file.lower().endswith(('.jpg', '.jpeg', '.png', '.webp')):
                         try:
                             # Ekstraksi metadata dari nama file
-                            filename_only = os.path.splitext(file)[0]  # buang .jpg
+                            filename_only = os.path.splitext(file)[0]  # buang ekstensi
                             parts = filename_only.split('_')[-1].split(',')  # ambil bagian setelah suku
                             sudut = parts[0] if len(parts) > 0 else ''
                             ekspresi = parts[1] if len(parts) > 1 else ''
@@ -37,4 +38,4 @@ with open(output_csv, mode='w', newline='', encoding='utf-8') as f:
     writer.writerow(['path_gambar', 'nama', 'suku', 'ekspresi', 'sudut', 'pencahayaan'])
     writer.writerows(rows)
 
-print(f"CSV berhasil dibuat sebagai '{output_csv}' dengan {len(rows)} data.")
+print(f"✅ CSV berhasil dibuat sebagai '{output_csv}' dengan {len(rows)} data.")

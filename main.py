@@ -2,6 +2,8 @@ import cv2
 import os
 import csv
 from mtcnn import MTCNN
+import numpy as np
+from PIL import Image
 
 # Inisialisasi detector
 detector = MTCNN()
@@ -11,11 +13,30 @@ csv_path = "dataset.csv"
 output_folder = "cropped_faces"
 os.makedirs(output_folder, exist_ok=True)
 
-# Ukuran maksimum gambar input agar hemat memori
-MAX_SIZE = 1000 
-obso
-# Ukuran minimum hasil crop wajah (agar tidak blur saat pelatihan/deteksi lanjut)
+# Ukuran maksimum gambar input 
+MAX_SIZE = 1000
 OUTPUT_FACE_SIZE = (512, 512)
+MARGIN = 20
+CONFIDENCE_THRESHOLD = 0.90
+
+# Ekstensi gambar yang didukung
+VALID_IMAGE_EXTENSIONS = ['.jpg', '.jpeg', '.png', '.bmp', '.webp']
+
+def load_image(img_path):
+    ext = os.path.splitext(img_path)[1].lower()
+    img = cv2.imread(img_path)
+
+    if img is None and ext == ".webp":
+        try:
+            with Image.open(img_path) as pil_img:
+                pil_img = pil_img.convert("RGB")
+                img = np.array(pil_img)
+                img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
+        except Exception as e:
+            print(f"[!] Gagal baca WebP dengan PIL: {img_path} -> {e}")
+            return None
+
+    return img
 
 with open(csv_path, newline='', encoding='utf-8') as csvfile:
     reader = csv.DictReader(csvfile)
@@ -25,16 +46,21 @@ with open(csv_path, newline='', encoding='utf-8') as csvfile:
         nama = row["nama"]
         suku = row["suku"]
 
+        # Cek ekstensi gambar
+        ext = os.path.splitext(img_path)[1].lower()
+        if ext not in VALID_IMAGE_EXTENSIONS:
+            print(f"[!] Format tidak didukung: {img_path}")
+            continue
+
         if not os.path.exists(img_path):
             print(f"[!] File tidak ditemukan: {img_path}")
             continue
 
-        img = cv2.imread(img_path)
+        img = load_image(img_path)
         if img is None:
-            print(f"[!] Gagal membaca gambar: {img_path}")
+            print(f"[!] Gagal membaca gambar (mungkin corrupt atau format tidak didukung): {img_path}")
             continue
 
-        # Resize jika gambar terlalu besar
         height, width = img.shape[:2]
         if max(height, width) > MAX_SIZE:
             scale = MAX_SIZE / max(height, width)
@@ -52,24 +78,31 @@ with open(csv_path, newline='', encoding='utf-8') as csvfile:
             print(f"[✓] {img_path} -> 0 wajah ditemukan.")
             continue
 
+        wajah_disimpan = 0
         for i, result in enumerate(results):
-            x, y, w, h = result['box']
-            x, y = max(0, x), max(0, y)
+            if result["confidence"] < CONFIDENCE_THRESHOLD:
+                print(f"[-] Confidence rendah ({result['confidence']:.2f}), dilewati.")
+                continue
 
-            # Crop dan resize wajah ke ukuran lebih besar agar tidak blur
-            face_crop = img[y:y + h, x:x + w]
+            x, y, w, h = result['box']
+            x, y = max(0, x - MARGIN), max(0, y - MARGIN)
+            w, h = w + 2 * MARGIN, h + 2 * MARGIN
+
+            x2, y2 = min(x + w, img.shape[1]), min(y + h, img.shape[0])
+            face_crop = img[y:y2, x:x2]
+
             if face_crop.size == 0:
                 print(f"[!] Wajah kosong atau crop di luar batas: {img_path}")
                 continue
 
             face_crop_resized = cv2.resize(face_crop, OUTPUT_FACE_SIZE)
 
-            # Simpan hasil crop
             output_path = os.path.join(output_folder, nama, suku)
             os.makedirs(output_path, exist_ok=True)
 
             filename_base = os.path.splitext(os.path.basename(img_path))[0]
-            out_filename = f"{filename_base}_face{i}.jpg"
+            out_filename = f"{filename_base}.jpg"
             cv2.imwrite(os.path.join(output_path, out_filename), face_crop_resized)
+            wajah_disimpan += 1
 
-        print(f"[✓] {img_path} -> {len(results)} wajah ditemukan dan disimpan.")
+        print(f"[✓] {img_path} -> {wajah_disimpan} wajah valid disimpan.")
