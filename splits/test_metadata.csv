@@ -1,0 +1,18 @@
+path_gambar,nama,suku,ekspresi,sudut,pencahayaan
+"cropped_faces/Frisca/Sunda/Frisca_Sunda_frontal,marahindoor.jpg",Frisca,Sunda,marah,frontal,indoor
+"cropped_faces/Zidane/Sunda/Zidane_Sunda_profil,senyum,indoor.jpg",Zidane,Sunda,senyum,profil,indoor
+"cropped_faces/Delia/Jawa/Delia_Jawa_miring45,senyum, indoor.jpg",Delia,Jawa,senyum,miring45,indoor
+"cropped_faces/Septi/Jawa/Septi_Jawa_miring45,senyum,indoor.jpg",Septi,Jawa,senyum,miring45,indoor
+"cropped_faces/Ratna/Sunda/Ratna_Sunda_frontal,terkejut,indoor.jpg",Ratna,Sunda,terkejut,frontal,indoor
+"cropped_faces/Frisca/Sunda/Frisca_Sunda_frontal,senyum,indoor.jpg",Frisca,Sunda,senyum,frontal,indoor
+"cropped_faces/Kalsa/Sunda/Kalsa_Sunda_miring45,netral,indoor.jpg",Kalsa,Sunda,netral,miring45,indoor
+"cropped_faces/Channyfah/Jawa/Channyfah_Jawa_miring45,netral,indoor.jpg",Channyfah,Jawa,netral,miring45,indoor
+"cropped_faces/Badriko/Jawa/Badriko_Jawa_frontal,terkejut,indoor.jpg",Badriko,Jawa,terkejut,frontal,indoor
+"cropped_faces/Channyfah/Jawa/Channyfah_Jawa_frontal,marah,indoor.jpg",Channyfah,Jawa,marah,frontal,indoor
+"cropped_faces/Bayu/Makassar/Bayu_Makassar_frontal,terkejut,outdoor.jpg",Bayu,Makassar,terkejut,frontal,outdoor
+"cropped_faces/Defa/Betawi/Defa_Betawi_frontal,marah,indoor.jpg",Defa,Betawi,marah,frontal,indoor
+"cropped_faces/Defa/Betawi/Defa_Betawi_frontal,senyum,indoor.jpg",Defa,Betawi,senyum,frontal,indoor
+"cropped_faces/Defa/Betawi/Defa_Betawi_frontal,terkejut,indoor.jpg",Defa,Betawi,terkejut,frontal,indoor
+"cropped_faces/Defa/Betawi/Defa_Betawi_miring45,netral,indoor.jpg",Defa,Betawi,netral,miring45,indoor
+"cropped_faces/Defa/Betawi/Defa_Betawi_profil,senyum,indoor.jpg",Defa,Betawi,senyum,profil,indoor
+"cropped_faces/Juhra/Melayu/Juhra_Melayu_frontal,terkejut,indoor.jpg",Juhra,Melayu,terkejut,frontal,indoor

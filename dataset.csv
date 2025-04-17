@@ -1,11 +1,9 @@
 path_gambar,nama,suku,ekspresi,sudut,pencahayaan
-"dataset/Amar/Sunda/Amar_Sunda_miring45,bingung,outdoor.jpg",Amar,Sunda,bingung,miring45,outdoor
 "dataset/Arlia/Jawa/Arlia_Jawa_frontal,marah,indoor.jpg",Arlia,Jawa,marah,frontal,indoor
 "dataset/Arlia/Jawa/Arlia_Jawa_frontal,senyum,indoor.jpg",Arlia,Jawa,senyum,frontal,indoor
 "dataset/Arlia/Jawa/Arlia_Jawa_frontal,terkejut,indoor.jpg",Arlia,Jawa,terkejut,frontal,indoor
 "dataset/Arlia/Jawa/Arlia_Jawa_miring45,netral,indoor.jpg",Arlia,Jawa,netral,miring45,indoor
 "dataset/Arlia/Jawa/Arlia_Jawa_profil,senyum,indoor.jpg",Arlia,Jawa,senyum,profil,indoor
-"dataset/Asshiva/Minangkabau/Assiva_Minangkabau_profil,netral,outdoor.jpg",Asshiva,Minangkabau,netral,profil,outdoor
 "dataset/Badriko/Jawa/Badriko_Jawa_frontal,marah,indoor.jpg",Badriko,Jawa,marah,frontal,indoor
 "dataset/Badriko/Jawa/Badriko_Jawa_frontal,senyum,indoor.jpg",Badriko,Jawa,senyum,frontal,indoor
 "dataset/Badriko/Jawa/Badriko_Jawa_frontal,terkejut,indoor.jpg",Badriko,Jawa,terkejut,frontal,indoor
@@ -22,7 +20,11 @@ path_gambar,nama,suku,ekspresi,sudut,pencahayaan
 "dataset/Defa/Betawi/Defa_Betawi_frontal,terkejut,indoor.jpg",Defa,Betawi,terkejut,frontal,indoor
 "dataset/Defa/Betawi/Defa_Betawi_miring45,netral,indoor.jpg",Defa,Betawi,netral,miring45,indoor
 "dataset/Defa/Betawi/Defa_Betawi_profil,senyum,indoor.jpg",Defa,Betawi,senyum,profil,indoor
+"dataset/Delia/Jawa/Delia_Jawa_frontal,marah, indoor.jpg",Delia,Jawa,marah,frontal, indoor
+"dataset/Delia/Jawa/Delia_Jawa_frontal,senyum, indoor.jpg",Delia,Jawa,senyum,frontal, indoor
+"dataset/Delia/Jawa/Delia_Jawa_frontal,terkejut, indoor.jpg",Delia,Jawa,terkejut,frontal, indoor
 "dataset/Delia/Jawa/Delia_Jawa_miring45,senyum, indoor.jpg",Delia,Jawa,senyum,miring45, indoor
+"dataset/Delia/Jawa/Delia_Jawa_profil,senyum, indoor.jpg",Delia,Jawa,senyum,profil, indoor
 "dataset/Devi/Sunda/Devi_Sunda_frontal,marah,indoor.jpg",Devi,Sunda,marah,frontal,indoor
 "dataset/Devi/Sunda/Devi_Sunda_frontal,senyum,indoor.jpg",Devi,Sunda,senyum,frontal,indoor
 "dataset/Devi/Sunda/Devi_Sunda_frontal,terkejut,indoor.jpg",Devi,Sunda,terkejut,frontal,indoor
